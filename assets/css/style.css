@@ -1,0 +1,5 @@
+.fixed-content {
+    width: 100%;
+    max-height: 14rem;
+    overflow-y: auto;
+}

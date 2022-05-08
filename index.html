@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="icon" type="image/jpg" href="./assets/images/favicon.jpg">
+
+  <!--seo data-->
+  <!-- Start SEO -->
+<title>AK TOOLS - Keywords Extractor</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Extraction, Key Texts, Extract Words, Keywords, Words Extractor">
+<meta name="title" content="Keywords Extractor" />
+<meta name="description" content="Use this keyword extraction tool to automatically extract keywords from your text data." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://aktools.net/keywords-extractor" />
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keywords Extractor">
+<meta property="og:url" content="https://aktools.net/keywords-extractor">
+<meta property="og:site_name" content="AK Tools">
+<meta property="og:updated_time" content="2022-01-14T10:00:00-00:00">
+<meta property="og:image" content="https://aktools.net/assets/images/AK-TOOLS-logo-2.jpeg">
+<meta property="og:image:secure_url" content="https://aktools.net/assets/images/AK-TOOLS-logo-2.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Welcome to AK Tools - Keywords Extractor">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Welcome to AK Tools - Keywords Extractor">
+<meta name="twitter:description" content="Use this keyword extraction tool to automatically extract keywords from your text data." />
+<meta name="twitter:image" content="https://aktools.net/assets/images/AK-TOOLS-logo-2.jpeg">
+<!-- / End SEO plugin. -->
+
+
+  <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<main>
+
+  <div class="container bg-light rounded p-4 mt-3 mb-5">
+    <h2>
+      <i class="fas fa-cogs"></i> Keywords Extractor
+    </h2>
+    <p class="mb-3">Use this keyword extraction tool to automatically extract keywords from your text data.</p>
+    
+    <form action="#">
+    <div class="row mb-4">
+      <div class="col-md-6 col-sm-12 border border-dark p-5">
+        <h5 for="comment" class="fw-bold">Your Text</h5>
+        <textarea class="form-control keywords-title" rows="5" id="comment" name="text"></textarea>
+      </div>
+      <div class="col-md-6 col-sm-12 border border-dark p-5">
+        <h5 for="comment" class="fw-bold">Results</h5>
+        <table class="table">
+          <thead>
+            <tr>
+            <th>Tag</th>
+            <th>Value</th>
+            <th>Copy</th>
+            </tr>
+          </thead>
+        </table>
+        <div class="fixed-content">
+        <table class="table">
+          <tbody id="keywords-table-data">
+            <tr id="default-data">
+              <td>--</td>
+              <td>--</td>
+              <td>--</td> 
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+
+</main>
+
+
+		<!-- js scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+		<script src='assets/js/script.js'></script> 
+		
+		<!-- Instantiate clipboard by passing a string selector -->
+		<script>
+		  var clipboard = new ClipboardJS('.copy-btn');
+		  
+		  //set bootstrap tooltip
+		  $(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		  });
+		</script>
+</body>
+</html>
