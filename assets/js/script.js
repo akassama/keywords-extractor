@@ -19,6 +19,7 @@ $(document).ready(function() {
 		//set keywords variable to empty and set minimum word length
 		var keywords = "";
 		var min_lenght = 4;
+		var max_lenght = 20;
 		
         var split = title.split(" ");
         for(var i = 0; i < split.length; i++) {
@@ -26,7 +27,7 @@ $(document).ready(function() {
         	var text = split[i].replace(/\./g,'');
 			
 			//check if word meets criteria
-            if(meetsCriteria(text, keywords, min_lenght)){
+            if(meetsCriteria(text, keywords, min_lenght, max_lenght)){
 			  //add to keywords string separated by comma
               keywords += text+",";
             } 
@@ -43,12 +44,12 @@ $(document).ready(function() {
 	
 	
 	//function to check if text meets criteria
-	function meetsCriteria(text, current_keywords, min_lenght){
+	function meetsCriteria(text, current_keywords, min_lenght, max_lenght){
 		//words to exclude
         var exclude_array = ['a','about','all','also','and','as','at','be','because','but','by','can','come','could','day','do','even','find','first','for','from','get','give','go','have','he','her','here','him','his','how','I','if','in','into','it','its','just','know','like','look','make','man','many','me','more','my','new','no','not','now','of','on','one','only','or','other','our','out','people','say','see','she','so','some','take','tell','than','that','the','their','them','then','there','these','they','thing','think','this','those','time','to','two','up','use','very','want','way','we','well','what','when','which','who','will','with','would','year','you','your','has','was','why'];
         
 		//check if word meets lenght, not number, not a duplicate, and not in exclude array
-		if(text.length >= min_lenght && !$.isNumeric(text) && (current_keywords.indexOf(text) < 0) && (jQuery.inArray(text.toLowerCase(), exclude_array) < 0)) {
+		if(text.length >= min_lenght && text.length <= max_lenght && !$.isNumeric(text) && (current_keywords.indexOf(text) < 0) && (jQuery.inArray(text.toLowerCase(), exclude_array) < 0)) {
 		  return true;
 		} 
 		return false;
